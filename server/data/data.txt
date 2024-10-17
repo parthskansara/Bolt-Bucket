@@ -1,0 +1,59 @@
+TABLE: cars
+
+ATTRIBUTES:
+id SERIAL PRIMARY KEY,
+exterior_id INTEGER REFERENCES exterior(id)
+roof_id INTEGER REFERENCES roof(id)
+wheels_id INTEGER REFERENCES wheels(id)
+interior_id INTEGER REFERENCES interior(id)
+convertible BOOLEAN
+
+----------------------
+TABLE: exterior
+
+ATTRIBUTES:
+id SERIAL PRIMARY KEY,
+description VARCHAR(255) NOT NULL,
+price INTEGER NOT NULL,
+url TEXT
+
+-----------------------
+TABLE: roof
+
+ATTRIBUTES:
+id SERIAL PRIMARY KEY,
+description VARCHAR(255) NOT NULL,
+price INTEGER NOT NULL,
+url TEXT,
+convertible_only BOOLEAN
+
+-----------------------
+TABLE: wheels
+
+ATTRIBUTES:
+id SERIAL PRIMARY KEY,
+description VARCHAR(255) NOT NULL,
+price INTEGER NOT NULL,
+url TEXT
+
+-----------------------
+TABLE: interior
+
+ATTRIBUTES:
+id SERIAL PRIMARY KEY,
+description VARCHAR(255) NOT NULL,
+price INTEGER NOT NULL,
+url TEXT,
+convertible_only BOOLEAN
+
+
+-----------------------
+
+
+# foreign key example
+CREATE TABLE tests 
+( 
+   subject_id SERIAL,
+   subject_name text,
+   highestStudent_id integer REFERENCES students (student_id)
+);

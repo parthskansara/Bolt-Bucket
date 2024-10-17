@@ -1,0 +1,28 @@
+.car-details-container {
+  background-color: var(--card-background-color);
+  margin: 20px;
+  padding: 30px;
+}
+
+.car-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.car-details-col2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.car-details-col1 {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.car-details-row {
+  display: flex;
+  flex-direction: row;
+}

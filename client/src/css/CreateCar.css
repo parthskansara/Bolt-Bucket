@@ -1,0 +1,80 @@
+.categories {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.car-name {
+  margin-left: 250px;
+}
+
+.car-name-input {
+  font-family: var(--font-family);
+  font-size: 13px;
+  height: 40px !important; /* Adjust the height as needed */
+  width: 160px !important;
+  margin: 0;
+  padding: 10px !important;
+}
+
+.price-tag {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  width: 250px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: black;
+  padding: 20px;
+  border: 5px solid var(--primary);
+  border-radius: 3px;
+  width: 80%;
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.customization-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  padding: 30px;
+  align-items: center;
+}
+
+.item-display-container {
+  border: 1px solid white;
+  height: 88px;
+  width: 138px;
+  padding: 10px 5px;
+}
+
+.selected {
+  border: 2px solid green;
+}
+
+.item-display-container p {
+  font-size: 12px;
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.close-modal-btn {
+  height: 60px !important;
+}
